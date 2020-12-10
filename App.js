@@ -8,8 +8,8 @@ import Constants from 'expo-constants';
    {
      super();
      this.state={
-       data:[],
-       datainfo:[]
+       data:[]
+   
      }
    }
    componentDidMount()
@@ -19,9 +19,9 @@ import Constants from 'expo-constants';
   async apiCall(){
    let resp =await fetch('https://randomuser.me/api')
    let respJson = await resp.json()
-  //console.warn(respJson.info)
+  //console.warn(respJson.data)
    this.setState({data:respJson.results})
-    this.setState({datainfo:respJson.info})
+   
     }  
     
   render(){
